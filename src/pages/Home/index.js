@@ -31,12 +31,12 @@ function Home() {
   }, []);
   const navigate = useNavigate();
   return (
-    <div>
+   user && <div>
       <div className="flex justify-between">
         <div>
           <input placeholder="Search doctors" className="w-400" />
         </div>
-        {user.role !== "doctor" && (
+        {user?.role !== "doctor" && (
           <button
             className="outlined-btn"
             onClick={() => navigate("/apply-doctor")}
